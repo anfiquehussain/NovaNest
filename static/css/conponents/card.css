@@ -1,0 +1,176 @@
+:root {
+  --text-50: #050815;
+  --text-100: #090f2a;
+  --text-200: #121e54;
+  --text-300: #1c2d7d;
+  --text-400: #253da7;
+  --text-500: #2e4cd1;
+  --text-600: #5870da;
+  --text-700: #8293e3;
+  --text-800: #abb7ed;
+  --text-900: #d5dbf6;
+  --text-950: #eaedfa;
+
+  --background-50: #0b0c0f;
+  --background-100: #16181d;
+  --background-200: #2c2f3a;
+  --background-300: #424757;
+  --background-400: #585f74;
+  --background-500: #6e7791;
+  --background-600: #8b92a7;
+  --background-700: #a8adbd;
+  --background-800: #c5c8d3;
+  --background-900: #e2e4e9;
+  --background-950: #f0f1f4;
+
+  --primary-50: #0f0d0a;
+  --primary-100: #1f1a14;
+  --primary-200: #3e3428;
+  --primary-300: #5d4e3c;
+  --primary-400: #7b6751;
+  --primary-500: #9a8165;
+  --primary-600: #ae9a84;
+  --primary-700: #c3b4a2;
+  --primary-800: #d7cdc1;
+  --primary-900: #ebe6e0;
+  --primary-950: #f5f2f0;
+
+  --secondary-50: #190201;
+  --secondary-100: #320501;
+  --secondary-200: #630903;
+  --secondary-300: #950e04;
+  --secondary-400: #c71205;
+  --secondary-500: #f91706;
+  --secondary-600: #fa4538;
+  --secondary-700: #fb746a;
+  --secondary-800: #fca29c;
+  --secondary-900: #fed1cd;
+  --secondary-950: #fee8e6;
+
+  --accent-50: #1a1500;
+  --accent-100: #332b00;
+  --accent-200: #665500;
+  --accent-300: #998000;
+  --accent-400: #ccaa00;
+  --accent-500: #ffd500;
+  --accent-600: #ffdd33;
+  --accent-700: #ffe666;
+  --accent-800: #ffee99;
+  --accent-900: #fff6cc;
+  --accent-950: #fffbe5;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.icon-card-row {
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+.icon-card-container {
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards per row, adjusting for gap */
+  margin: 2px;
+  background-color: var(--background-100);
+  border: 1px solid var(--background-200);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.icon-card-container:hover {
+  transform: translateY(-10px);
+}
+.home-card-img-container {
+  width: 100%;
+  height: 90%;
+}
+.icon-card-img {
+  width: 90%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 10px;
+}
+.home-title-card-container {
+  font-family: monospace;
+  font-size: 5pt;
+  color: var(--text);
+}
+
+.popup-card {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--background-400);
+  width: 20%;
+  height: 20%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adjust as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for better appearance */
+  border-radius: 8px; /* Optional: for rounded corners */
+}
+
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 18px; /* Adjust as needed */
+}
+
+.message {
+  text-align: center;
+  font-size: 16px; /* Adjust as needed */
+  margin-top: 20px; /* Adjust as needed */
+}
+
+
+@media (max-width: 768px) {
+  .icon-card-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-card-container {
+    width: 100%;
+    height: 150px;
+    margin: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .icon-card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* space between cards */
+    margin: 20px;
+  }
+
+  .icon-card-container {
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards per row, adjusting for gap */
+    margin: 2px;
+    background-color: var(--background-100);
+    border: 1px solid var(--background-200);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+}

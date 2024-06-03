@@ -1,0 +1,22 @@
+a {
+    color: var(--primary);
+    text-decoration: none;
+    margin-right: 20px;
+}
+ li{
+  display: inline;
+
+ }
+
+ .title{
+  color: var(--secondary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: x-large;
+
+ }
+
+ .menu{
+  border-left: 1px solid var(--text);
+  border-right: 1px solid var(--text);
+  padding: 5px;
+ }

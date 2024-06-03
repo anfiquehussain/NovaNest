@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Nova Base{% endblock %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css\index.css' %}">
+<link rel="stylesheet" href="{% static 'css\conponents\card.css' %}">
+<link rel="stylesheet" href="{% static 'css\conponents\navbar.css' %}">
+
+
+{% endblock %}
+
+{% block content %}
+  {% include 'components/Navbar/Navbar.html' %}
+
+<!-- <a href="{% url 'ytv' %}">Youtube videos</a> -->
+
+
+{% for key, value in image_url.items %}
+    {% include 'components/home/card.html' with title=key imgurl=value.image url=value.url %}
+{% endfor %}
+
+
+<!-- {% include 'components/Footer/Footer.html' %} -->
+
+{% endblock %}

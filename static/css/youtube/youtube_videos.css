@@ -1,0 +1,96 @@
+
+
+
+.tv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh; /* Set the height of the container to full viewport height */
+}
+
+.tv-screen {
+    width: 100%;
+    height: 90%;
+}
+
+.tv-control {
+    margin-top: 20px;
+    text-align: center;
+    float: left;
+}
+
+#random_btn {
+    color: var(--text-800);
+    background-color: var(--background-100);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#random_btn:hover {
+    color: var(--text-700);
+    background-color: var(--background-50);
+}
+
+
+
+.uytv-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.uytv-container form {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.uytv-container input[type="text"] {
+    padding: 10px;
+    width: 350px;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    background-color: var(--background-100);
+    color: var(--text);
+    margin-right: 10px;
+}
+
+.uytv-container button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: var(--text);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.uytv-container button[type="submit"]:hover {
+    background-color: var(--secondary-700);
+}
+
+.uytv-container p {
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 500px) {
+    .uytv-container input[type="text"] {
+        width: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    .uytv-container input[type="text"] {
+        width: 200px;
+    }
+    .uytv-container button[type="submit"] {
+        width: 200px;
+    }
+}

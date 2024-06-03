@@ -1,0 +1,43 @@
+{% load static %}
+
+<center>
+    <div class="icon-card-row">
+        {% if url == 'None' %}
+        <div class="icon-card-container" onclick="Clickcard()">
+            <div class="home-card-img-container">
+                <img class="icon-card-img" src="{% static 'img/icons/'|add:imgurl %}" alt="{{ title }}">
+            </div>
+            <div class="home-title-card-container">
+                <h1>{{ title }}</h1>
+            </div>
+        </div>
+        {% else %}
+        <a href="{{ url }}">
+            <div class="icon-card-container">
+                <div class="home-card-img-container">
+                    <img class="icon-card-img" src="{% static 'img/icons/'|add:imgurl %}" alt="{{ title }}">
+                </div>
+                <div class="home-title-card-container">
+                    <h1>{{ title }}</h1>
+                </div>
+            </div>
+        </a>
+        {% endif %}
+    </div>
+    <div class="popup-card" style="display: none;">
+        <p class="close-btn" onclick="ClickClose()">&#10006;</p>
+        <div class="message">
+            Coming soon...
+        </div>
+    </div>
+</center>
+
+<script>
+function Clickcard() {
+    document.querySelector('.popup-card').style.display = 'block';
+}
+
+function ClickClose() {
+    document.querySelector('.popup-card').style.display = 'none';
+}
+</script>

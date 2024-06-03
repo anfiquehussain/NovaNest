@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Upload YT videos{% endblock %}
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/youtube/youtube_videos.css' %}">
+<link rel="stylesheet" href="{% static 'css/conponents/navbar.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% include 'components/Navbar/Navbar.html' with  menulink1='ytv' menulink1title='Youtube video' %}
+
+<div class="uytv-container">
+    <form action="{% url 'upload_ytv' %}" method="post">
+        <input type="text" name="vid">
+        <button type="submit">upload link</button>
+    </form>
+    <p>{{ message }}</p> <!-- Include the message here -->
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
